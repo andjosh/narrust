@@ -2,3 +2,7 @@
 name = "narrust"
 version = "0.1.0"
 authors = ["andjosh <email@andjosh.com>"]
+
+[dependencies]
+rss = "*"
+request = "*"

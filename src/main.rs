@@ -24,6 +24,9 @@ fn main() {
     let rss_str = resp.body;
     let Rss(channel) = rss_str.parse::<Rss>().unwrap();
 
-    println!("{}", res.status_code);
-    println!("{}", channel.title);
+    println!("{}", resp.status_code);
+    match channel.items[0].title {
+        Some(ref x) => println!("{}", x),
+        None    => println!("-- No title found --")
+    }
 }
